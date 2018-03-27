@@ -8,6 +8,7 @@ import dto.ProfessionalWisdomDTO;
 
 public class DtoToMap {
 
+	//试试
 	public static void main(String[] args) {
 		DtoToMap.getEle(ProfessionalWisdomDTO.class,0);
 	}
