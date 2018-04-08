@@ -42,7 +42,7 @@ public class DtoToMap {
 			System.out.println("</resultMap>");
 	}
 	
-	public static void echoTab(int layers) {
+	private static void echoTab(int layers) {
 		for(int i=0;i<layers;i++) {
 			System.out.print("	");
 		}
