@@ -9,7 +9,7 @@ public class Digui {
 
 	public void dd() {
 		Bea bea = new Bea(1);
-		
+		//hehe
 		while(bea.getQq()<10) {
 			bea = new Bea(bea.getQq()+1);
 			System.out.println(bea.getQq());
