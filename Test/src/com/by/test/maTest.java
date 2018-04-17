@@ -51,11 +51,12 @@ public class maTest {
 			reader = new InputStreamReader(new FileInputStream(filename));
 			BufferedReader br = new BufferedReader(reader); // ����һ�����������ļ�����ת�ɼ�����ܶ���������
 			String line = "";
-			line = br.readLine();
-			while (line != null) {
+//			line = br.readLine();
+			while (true) {
 				line = br.readLine(); // һ�ζ���һ������
-				String[] strs = line.split("_");
 				StringBuffer sbf = new StringBuffer(line +" as ");
+				line = line.indexOf(".")!=-1?line.split("\\.")[1]:line;
+				String[] strs = line.split("_");
 				for (int i = 0; i < strs.length; i++) {
 					sbf.append((i==0?strs[i]:strs[i].substring(0, 1).toUpperCase() + strs[i].substring(1)));
 				}
