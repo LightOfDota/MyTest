@@ -3,7 +3,7 @@ package com.by.test;
 public class PattenTest {
 
 	public static void main(String[] args) {
-		String patten = "^(?![a-zA-Z]+$)(?![A-Z0-9]+$)(?![A-Z\\W_]+$)(?![a-z0-9]+$)(?![a-z\\W_]+$)(?![0-9\\W_]+$)[a-zA-Z0-9\\W_]$";
+		String patten = "^(?![a-zA-Z]+$)(?![A-Z0-9]+$)(?![A-Z\\W_]+$)(?![a-z0-9]+$)(?![a-z\\W_]+$)(?![0-9\\W_]+$)[a-zA-Z0-9\\W_]{0,}$";
 
 		String password1 = "fukang";      // false
 		String password2 = "Fukanggggg";  // false
