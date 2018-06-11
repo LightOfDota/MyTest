@@ -16,7 +16,7 @@ import java.util.Map;
 public class maTest {
 
 	public static void main(String[] args) {
-		maTest.readTxt("F://临时/a.txt");
+//		maTest.readTxt("F://临时/a.txt");
 //		Date date = new Date(-1);
 //		System.out.println(date);
 		
@@ -40,6 +40,22 @@ public class maTest {
 //		for(Map<String, Object> a : list_new) {
 //			System.out.println(a.get("js"));
 //		}
+		
+		String a = "ณۗۗۗۗۗۗۗۗۗۗ ";
+		String b = "ۗ";
+//		char[] charArray = a.toCharArray();
+//		for (char c : charArray) {
+//			System.out.println(c);
+//		}
+		StringBuffer c = new StringBuffer("ณ");
+		for(int i=0;i<=30;i++) {
+			c.append(b);
+		}
+		System.out.println(c.toString().length());
+		System.out.println(c.toString());
+		
+//		String q = "ณ";
+//		System.out.println(q.length());
 	}
 
 	static void readTxt(String pathname) {

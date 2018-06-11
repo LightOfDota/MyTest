@@ -4,30 +4,28 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class GetVideoOne {
+public class TestProcess {
 
-	
-	private void handler(String ffmpegPath, String upFilePath, String mediaPicPath) {  
+	public static void main(String[] args) {
+		  
 	    List<String> cutpic = new ArrayList<String>();  
-	    cutpic.add(ffmpegPath);  
-	    cutpic.add("-i");  
-	    cutpic.add(upFilePath); // 同上（指定的文件即可以是转换为flv格式之前的文件，也可以是转换的flv文件）  
-	    cutpic.add("-ss"); // 添加参数＂-ss＂，该参数指定截取的起始时间  
-	    cutpic.add("17"); // 添加起始时间为第17秒  
-	    cutpic.add("-t"); // 添加参数＂-t＂，该参数指定持续时间  
-	    cutpic.add("420"); // 添加持续时间为1毫秒  
-//	    cutpic.add("-accurate_seek ");  
+//	    cutpic.add(ffmpegPath);  
+//	    cutpic.add("-i");  
+//	    cutpic.add(upFilePath); // 同上（指定的文件即可以是转换为flv格式之前的文件，也可以是转换的flv文件）  
 //	    cutpic.add("-y");  
 //	    cutpic.add("-f");  
 //	    cutpic.add("image2");  
+//	    cutpic.add("-ss"); // 添加参数＂-ss＂，该参数指定截取的起始时间  
+//	    cutpic.add("0"); // 添加起始时间为第17秒  
+//	    cutpic.add("-t"); // 添加参数＂-t＂，该参数指定持续时间  
+//	    cutpic.add("0.001"); // 添加持续时间为1毫秒  
 //	    cutpic.add("-s"); // 添加参数＂-s＂，该参数指定截取的图片大小  
 //	    cutpic.add("500*400"); // 添加截取的图片大小为350*240  
-	    cutpic.add("-codec");
-	    cutpic.add("copy");
-	    cutpic.add(mediaPicPath); // 添加截取的图片的保存路径  
+//	    cutpic.add(mediaPicPath); // 添加截取的图片的保存路径  
+	    cutpic.add("echo");
+	    cutpic.add("%JAVA_HOME%");
 	    
 //	    for (String string : cutpic) {
 //			System.out.print(string+" ");
@@ -51,11 +49,6 @@ public class GetVideoOne {
 	        System.out.println(e);  
 	        e.printStackTrace();  
 	    }  
-	}
 	
-	public static void main(String[] args) {
-		GetVideoOne gvo = new GetVideoOne();
-		
-		gvo.handler("F:\\十五分钟\\ffmpeg-20180508-293a6e8-win64-static\\bin\\ffmpeg.exe", "F:\\十五分钟\\韦科惨案.Waco.S01E01.中英字幕.WEBrip.720P-人人影视.mp4", "F:\\十五分钟\\image\\"+new Date().getTime()+".mp4");
 	}
 }
